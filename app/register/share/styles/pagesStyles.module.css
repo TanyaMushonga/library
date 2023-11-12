@@ -1,0 +1,10 @@
+.main {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .topNav,
+  .mainSection {
+    width: 100%;
+  }
+}

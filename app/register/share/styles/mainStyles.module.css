@@ -1,0 +1,98 @@
+.main {
+    background-color: rgba(30, 56, 79, 1);
+    height: 51.8vh;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    border-radius: 15px;
+
+    padding: 7%;
+    align-items: center;
+
+}
+
+.input {
+    width: 60%;
+
+}
+
+.file {
+    border: 1px solid #ccc;
+    padding: 13px;
+    color: rgb(225, 238, 238);
+    border-radius: 5px;
+    width: 45%;
+
+}
+
+.file:hover {
+    background-color: rgb(39, 74, 104);
+}
+
+.divbtn {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+}
+
+.upload {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+
+    justify-content: space-between;
+}
+
+.button {
+    background-color: rgb(24, 44, 61);
+    border: none;
+    border-radius: 10px;
+    padding-top: .6px;
+    padding-bottom: .6px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.iconupload {
+    margin-right: 3em;
+}
+
+.button:hover {
+    background-color: rgb(39, 74, 104);
+}
+
+.text {
+    color: aliceblue;
+    font-size: 1em;
+}
+
+.progressBar {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 3%;
+
+    box-shadow: 6px 8px 10px 2px rgba(174, 179, 187, 0.1);
+    border-radius: 5px;
+}
+
+.progress {
+    width: 90%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(61, 155, 238);
+color: rgb(61, 155, 238);
+    transition: width .4s ease-in-out;
+
+}
+
+.uploadstate {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -1,0 +1,29 @@
+.button{
+    width: 80%;
+    height: 45px;
+  background-color: rgba(22, 44, 64, 1);
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+ 
+}
+.button:hover{
+  background-color: rgb(27, 63, 97);
+}
+.container{
+    align-items: center;
+    width: 100%;
+    padding-left: 10%;
+}
+.btnItems{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.icon{
+  margin-right: 20%;
+  margin-left: 7%;
+}

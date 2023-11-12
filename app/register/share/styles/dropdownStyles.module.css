@@ -1,0 +1,13 @@
+.select{
+    background-color:rgb(23, 42, 59);
+    border-radius: 7px;
+    color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    height: 3em;
+    margin-bottom: .8em;
+    border: solid 1px #e4d7d7;
+}
+.select:hover{
+    background-color: rgb(39, 74, 104);
+}

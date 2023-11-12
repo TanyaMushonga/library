@@ -1,0 +1,19 @@
+.sidebar {
+  background-color: rgba(30, 56, 79, 1);
+  height: 98vh;
+  width: 28%;
+  border-radius: 10px;
+}
+
+.main {
+  display: flex;
+}
+.maiSection {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+}

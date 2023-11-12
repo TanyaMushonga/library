@@ -1,0 +1,109 @@
+.main {
+  background-color: rgba(30, 56, 79, 1);
+  height: 86.7vh;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 13px;
+  overflow: auto;
+}
+.department {
+  padding-top: 20px;
+  padding-left: 43%;
+}
+.dept {
+  color: rgb(183, 203, 212);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 98%;
+  margin-bottom: 20px;
+  background-color: rgb(26, 44, 63);
+  margin-left: 13px;
+  margin-right: 10px;
+  height: 2.7em;
+  color: rgb(183, 203, 212);
+  border-radius: 13px;
+}
+.tbheader {
+  padding: 18px;
+  border: none;
+  background-color: rgb(4, 6, 8);
+  text-align: left;
+}
+.tbheader:nth-child(1) {
+  width: 20%;
+}
+.tbheader:nth-child(2) {
+  width: 20%;
+}
+.tbheader:nth-child(3) {
+  width: 20%;
+}
+.tbheader:nth-child(4) {
+  width: 20%;
+}
+.tbheader:nth-child(5) {
+  width: 20%;
+}
+.td {
+  padding: 18px;
+}
+
+.tablerow:nth-child(even) {
+  background-color: rgb(31, 53, 77);
+}
+.tablerow:hover {
+  background-color: rgb(53, 89, 128);
+  cursor: pointer;
+}
+.download {
+  height: 2em;
+  background-color: rgb(24, 41, 59);
+  border: none;
+  border-radius: 15px;
+  color: rgb(183, 203, 212);
+  cursor: pointer;
+}
+
+.download:hover {
+  background-color: rgb(58, 80, 90);
+}
+
+.tbheader,
+.td {
+  word-wrap: break-word;
+  padding: 10px;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+  }
+
+  .download {
+    width: auto;
+  }
+  .department {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-x: scroll;
+  }
+
+  .tbheader,
+  .td {
+    word-wrap: break-word;
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .download {
+    width: 100%;
+  }
+}

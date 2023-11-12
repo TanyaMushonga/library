@@ -1,0 +1,112 @@
+.navBar {
+  background-color: rgba(22, 35, 48, 1);
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-left: 2em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.searchBar {
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 30px;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 49px;
+  margin-top: 1.8em;
+  border-radius: 15px;
+  outline: none;
+  background: rgb(28, 44, 59);
+  border: none;
+  color: #fff;
+}
+.searchBar:hover {
+  background-color: rgb(39, 74, 104);
+}
+.link1 {
+  color: blue;
+  text-decoration: none;
+}
+
+.searchButton {
+  background-color: rgba(30, 56, 79, 1);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: -4.07em;
+  height: 3.1em;
+  margin-top: 1.6em;
+}
+.searchButton:hover {
+  background-color: rgb(39, 74, 104);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px;
+  justify-content: space-between;
+  padding-left: 5.5em;
+  padding-top: 0.1em;
+  margin-top: 0.1em;
+  background-color: rgba(30, 56, 79, 1);
+  height: 80vh;
+  border-radius: 0.5em;
+}
+
+.cardrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 2em;
+}
+
+.share {
+  margin-left: 75%;
+}
+
+.searchNav {
+  display: flex;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchNav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: scroll;
+  }
+}
