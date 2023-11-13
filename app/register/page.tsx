@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/registerStyles.module.css";
 import InputBox from "./registerComponents/inputbox";
 import SignInbtn from "./registerComponents/signInbutton";
@@ -14,10 +14,11 @@ import {
   GithubAuthProvider,
   signInWithPopup,
   signInWithRedirect,
+  getRedirectResult,
 } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { app } from './../../firebaseconfig';
-import { set } from "firebase/database";
+
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -30,21 +31,29 @@ const Register = () => {
 
   const signUpwithGoogle = () => {
 
-    signInWithPopup(auth, googleauthProvider).then((response) => {
-      console.log(response.user);
-      router.push('/register/share');
-
-
-    }).catch((error) => {
-      if (error.code === 'auth/account-exists-with-different-credential') {
-        alert('Email already associated with another account');
-        setEmail("");
-      } else {
-        console.log(error);
-      }
-    });
+    signInWithRedirect(auth, googleauthProvider);
   };
 
+
+
+
+  useEffect(() => {
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result && result.user) {
+          console.log(result.user);
+          router.push('/register/share');
+        }
+      })
+      .catch((error) => {
+        if (error.code === 'auth/account-exists-with-different-credential') {
+          alert('Email already associated with another account');
+          setEmail("");
+        } else {
+          console.log(error);
+        }
+      });
+  }, [auth, router]);
 
   const signUpwithGitHub = () => {
     signInWithPopup(auth, githubauthProvider).then((response) => {
