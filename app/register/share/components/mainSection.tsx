@@ -18,9 +18,10 @@ import {
   getStorage,
   uploadBytesResumable,
 } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDoc, doc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import { set } from "firebase/database";
+import { get } from "http";
 //imports ending here
 
 //this is the main section of the page
@@ -43,9 +44,16 @@ const MainSection = () => {
   //all the states end here
 
   //this is the upload function that uploads the file to firebase storage and the data to firestore
-  const upload = async () => {
+  const upload = async (courseCode: string) => {
     //this is the validation for the input fields
-    if (courseName === "") {
+    const courseRef = doc(db, "/" + faculty + "/programs/" + selectedDepartment, courseCode);
+    const courseSnap = await getDoc(courseRef);
+
+    if (courseSnap.exists()) {
+      alert("This course already exists in the database");
+      setIsUploadClicked(false);
+      return;
+    } else if (courseName === "") {
       alert("Please enter the course name");
       setIsUploadClicked(false);
       return;
@@ -132,11 +140,12 @@ const MainSection = () => {
         alert("Please select a paper that you want to share");
       }
     }
+
   };
 
   const handleUploadClick = () => {
     setIsUploadClicked(true);
-    upload();
+    upload(courseCode);
   };
 
   //this is the return statement that returns the jsx
