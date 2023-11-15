@@ -110,5 +110,6 @@
     min-height: 100vh;
     overflow-y: scroll;
     justify-content: space-around;
+    background-color: rosybrown;
   }
 }
