@@ -108,6 +108,6 @@
 
     justify-content: center;
     min-height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
