@@ -108,5 +108,7 @@
     align-items: center;
     min-height: 100vh;
     overflow: scroll;
+    margin-right: 30%;
+    margin-left: 30%;
   }
 }
