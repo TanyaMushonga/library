@@ -105,11 +105,10 @@
   .main {
     display: flex;
     flex-direction: column;
-    padding-top: 2em;
+    padding-right: 2em;
+    align-items: center;
     justify-content: center;
     min-height: 100vh;
     overflow-y: scroll;
-    justify-content: space-around;
-    background-color: rosybrown;
   }
 }
