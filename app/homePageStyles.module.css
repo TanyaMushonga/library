@@ -108,7 +108,6 @@
 
     justify-content: center;
     min-height: 100vh;
-    overflow-y: scroll;
-    overflow-x: auto;
+    overflow: scroll;
   }
 }
