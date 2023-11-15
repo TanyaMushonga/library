@@ -95,8 +95,8 @@ export default function Home() {
         </div>
       </div>
       <p className={styles.share}>
-        Want to share a past exam paper with colleagues? click
-        <Link href="/register" className={styles.link1}> Here</Link>
+        click here to
+        <Link href="/register" className={styles.link1}> share</Link>
       </p>
       <div className={styles.main}>
         <Link href={{ pathname: "/departments", query: { faculty: "Applied Science", department: appliedScience, }, }} className={styles.link}><Card title={"Applied Science"} imageUrl={"/applied.png"} /></Link>
