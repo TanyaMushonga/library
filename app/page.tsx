@@ -76,7 +76,7 @@ export default function Home() {
     "Coaching"
   ];
   return (
-    <main>
+    <main >
 
       <div className={styles.navBar}>
         <Image src="/logo.jpg" alt="logo of nust" width={90} height={100} />
