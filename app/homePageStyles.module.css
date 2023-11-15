@@ -115,5 +115,6 @@
     padding-top: 2em;
     justify-content: center;
     display: flex;
+    flex-direction: row;
   }
 }
