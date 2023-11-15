@@ -105,9 +105,10 @@
   .main {
     display: flex;
     flex-direction: column;
-
+    padding-top: 2em;
     justify-content: center;
     min-height: 100vh;
     overflow-y: scroll;
+    justify-content: space-around;
   }
 }
